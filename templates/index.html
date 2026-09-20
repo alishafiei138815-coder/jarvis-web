@@ -1,1 +1,22 @@
-x
+
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b12"><link rel="manifest" href="/manifest.json">
+<title>JARVIS V2</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="layout">
+<aside><div class="logo"><span>◉</span><div><b>JARVIS</b><small>V2 ASSISTANT</small></div></div>
+<button class="nav active" data-p="dash">◈ Dashboard</button><button class="nav" data-p="history">◷ History</button>
+<button class="nav" data-p="notes">▤ Notes</button><button class="nav" data-p="reminders">⏰ Reminders</button>
+<button class="nav" data-p="skills">⚙ Skills</button><div class="foot">Python • Flask • SQLite<br>Progressive Web App</div></aside>
+<main><header><span><i></i> SYSTEM ONLINE</span><strong id="clock"></strong></header>
+<section id="dash" class="panel active"><div class="hero"><div><small>PERSONAL AI ASSISTANT</small><h1>Good evening.</h1><p>Command center ready.</p></div><div class="reactor">J</div></div>
+<div class="command"><textarea id="cmd" placeholder="Ask Jarvis anything you want to automate..."></textarea><div><button id="mic">🎙 Voice</button><button id="run">Run command ↵</button></div></div>
+<div class="response"><small>JARVIS RESPONSE</small><div id="resp">Waiting for your command...</div></div>
+<div class="quick"><button data-c="What time is it?">🕒<b>Time</b></button><button data-c="What is the date?">📅<b>Date</b></button><button data-c="calculate 128 * 16">🧮<b>Calculate</b></button><button data-c="open youtube">▶<b>YouTube</b></button></div>
+<div class="stats"><div><b id="historyCount">0</b><span>Commands</span></div><div><b id="noteCount">0</b><span>Notes</span></div><div><b id="remCount">0</b><span>Reminders</span></div></div></section>
+
+<section id="history" class="panel"><div class="head"><h2>Command History</h2><button onclick="loadHistory()">Refresh</button></div><div id="historyList"></div></section>
+<section id="notes" class="panel"><div class="head"><h2>Notes</h2></div><div class="form"><input id="nt" placeholder="Title"><textarea id="nb" placeholder="Write a note..."></textarea><button id="saveNote">Save note</button></div><div id="notesList" class="grid"></div></section>
+<section id="reminders" class="panel"><div class="head"><h2>Reminders</h2></div><div class="form"><input id="rt" placeholder="Reminder title"><input id="ra" type="datetime-local"><button id="saveReminder">Create reminder</button></div><div id="remList" class="grid"></div></section>
+<section id="skills" class="panel"><div class="head"><h2>Skill Center</h2></div><div class="skills"><div>🧮<b>Calculator</b><small>Arithmetic engine</small></div><div>🌐<b>Web Search</b><small>Search launcher</small></div><div>📝<b>Notes</b><small>Persistent SQLite notes</small></div><div>⏰<b>Reminders</b><small>Browser notifications</small></div><div>🎙<b>Voice</b><small>Speech recognition</small></div><div>📱<b>PWA</b><small>Installable on mobile</small></div></div></section>
+</main></div><script src="/static/app.js"></script></body></html>
